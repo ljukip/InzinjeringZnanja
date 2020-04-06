@@ -1,0 +1,10 @@
+%-------------------------------further procidures required:
+%disease_procedure that could be required_possibility of it being required
+
+%chronic glaucoma
+disease_procedure_possibility(chronic_glaucoma, ophthalmic_examination_and_evaluation_eye_exam, 100).
+disease_procedure_possibility(chronic_glaucoma, ophthalmologic_and_otologic_diagnosis_and_treatment, 86).
+disease_procedure_possibility(chronic_glaucoma, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 81).
+disease_procedure_possibility(chronic_glaucoma, lens_and_cataract_procedures, 44).
+disease_procedure_possibility(chronic_glaucoma, glaucoma_procedures, 26).
+disease_procedure_possibility(chronic_glaucoma, other_intraocular_therapeutic_procedures, 11).

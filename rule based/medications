@@ -1,0 +1,11 @@
+%-----------------------------------------medications for the disease:
+%disease_medication prescribed_possibility of it perscription
+
+%chronic glaucoma
+disease_medication_possibility(chronic_glaucoma, latanoprost, 100).
+disease_medication_possibility(chronic_glaucoma, bimatoprost_ophthalmic, 86).
+disease_medication_possibility(chronic_glaucoma, timolol, 66).
+disease_medication_possibility(chronic_glaucoma, prednisolone_ophthalmic, 46).
+disease_medication_possibility(chronic_glaucoma, brimonidine_timolol_ophthalmic, 44).
+disease_medication_possibility(chronic_glaucoma, brinzolamide_ophthalmic, 41).
+disease_medication_possibility(chronic_glaucoma, phenylephrine_duramax, 36).
