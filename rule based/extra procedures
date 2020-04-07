@@ -168,3 +168,81 @@ disease_procedure_possibility(abnormal_eyelid_movement, electroencephalogram, 40
 disease_procedure_possibility(abnormal_eyelid_movement, insertion_of_catheter_into_urinary_bladder, 38).
 disease_procedure_possibility(abnormal_eyelid_movement, diagnostic_ultrasound_of_head_and_neck, 12).
 
+%eye deviation
+disease_procedure_possibility(eye_deviation, cat_scan_of_head, 100).
+disease_procedure_possibility(eye_deviation, referral_to_home_health_care_service, 84).
+disease_procedure_possibility(eye_deviation, occupational_therapy:assessment_speech_therapy, 84).
+disease_procedure_possibility(eye_deviation, ophthalmologic_and_otologic_diagnosis_and_treatment, 84).
+disease_procedure_possibility(eye_deviation, corneal_transplant, 11).
+disease_procedure_possibility(eye_deviation, procedures_on_spleen, 11).
+disease_procedure_possibility(eye_deviation, removal_of_ectopic_pregnancy, 11).
+disease_procedure_possibility(eye_deviation, tracheostomy_temporary_and_permanent, 11).
+
+%cross eyed
+disease_procedure_possibility(cross_eyed, other_extraocular_muscle_and_orbit_therapeutic_procedures, 100).
+disease_procedure_possibility(cross_eyed, ophthalmologic_and_otologic_diagnosis_and_treatment, 100).
+disease_procedure_possibility(cross_eyed, magnetic_resonance_imaging, 100).
+disease_procedure_possibility(cross_eyed, corneal_transplant, 12).
+disease_procedure_possibility(cross_eyed, procedures_on_spleen, 12).
+disease_procedure_possibility(cross_eyed, removal_of_ectopic_pregnancy, 12).
+disease_procedure_possibility(cross_eyed, tracheostomy_temporary_and_permanent, 12).
+disease_procedure_possibility(cross_eyed, diagnostic_endocrine_procedures, 12).
+
+%eye pain
+disease_procedure_possibility(eye_pain, cat_scan_of_head, 100).
+disease_procedure_possibility(eye_pain, ophthalmic_examination_and_evaluation_eye_exam, 93).
+disease_procedure_possibility(eye_pain, nonoperative_removal_of_foreign_body, 88).
+disease_procedure_possibility(eye_pain, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 79).
+disease_procedure_possibility(eye_pain, ophthalmologic_and_otologic_diagnosis_and_treatment, 68).
+disease_procedure_possibility(eye_pain, lens_and_cataract_procedures, 38).
+disease_procedure_possibility(eye_pain, diagnostic_procedures_on_eye, 31).
+disease_procedure_possibility(eye_pain, other_extraocular_muscle_and_orbit_therapeutic_procedures, 11).
+
+%eye burns or stings
+disease_procedure_possibility(eye_burns_or_stings, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 100).
+disease_procedure_possibility(eye_burns_or_stings, ophthalmic_examination_and_evaluation_eye_exam, 100).
+disease_procedure_possibility(eye_burns_or_stings, nonoperative_removal_of_foreign_body, 100).
+disease_procedure_possibility(eye_burns_or_stings, ophthalmologic_and_otologic_diagnosis_and_treatment, 100).
+disease_procedure_possibility(eye_burns_or_stings, glaucoma_procesures, 100).
+disease_procedure_possibility(eye_burns_or_stings, lens_and_cataract_procedures, 100).
+
+%foreign body sensation
+disease_procedure_possibility(foreign_body_sensation, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 100).
+disease_procedure_possibility(foreign_body_sensation, nonoperative_removal_of_foreign_body, 95).
+disease_procedure_possibility(foreign_body_sensation, ophthalmic_examination_and_evaluation_eye_exam, 71).
+disease_procedure_possibility(foreign_body_sensation, ophthalmologic_and_otologic_diagnosis_and_treatment, 64).
+disease_procedure_possibility(foreign_body_sensation, other_intraocular_therapeutic_procedures, 37).
+disease_procedure_possibility(foreign_body_sensation, lens_and_cataract_procedures, 37).
+disease_procedure_possibility(foreign_body_sensation, diagnostic_spinal_tap, 11).
+disease_procedure_possibility(foreign_body_sensation, other_OR_therapeutic_nervous_system_procedures, 11).
+
+%lacrimation
+disease_procedure_possibility(lacrimation, ophthalmic_examination_and_evaluation_eye_exam, 100).
+disease_procedure_possibility(lacrimation, ophthalmologic_and_otologic_diagnosis_and_treatment, 76).
+disease_procedure_possibility(lacrimation, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 65).
+disease_procedure_possibility(lacrimation, other_diagnostic_procedures_on_skin_and_subcutaneous_tissue, 54).
+disease_procedure_possibility(lacrimation, influenzavirus_antibody_assay, 53).
+disease_procedure_possibility(lacrimation, other_respiratory_thrapy, 24).
+disease_procedure_possibility(lacrimation, nonoperative_removal_of_foreign_body, 24).
+disease_procedure_possibility(lacrimation, other_intraocular_therapeutic_procedures, 11).
+
+%spots or clouds in vision
+disease_procedure_possibility(spots_or_clouds_in_vision, ophthalmic_examination_and_evaluation_eye_exam, 100).
+disease_procedure_possibility(spots_or_clouds_in_vision, ophthalmologic_and_otologic_diagnosis_and_treatment, 78).
+disease_procedure_possibility(spots_or_clouds_in_vision, lens_and_cataract_procedures, 66).
+disease_procedure_possibility(spots_or_clouds_in_vision, cat_scan_of_head, 66).
+disease_procedure_possibility(spots_or_clouds_in_vision, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 57).
+disease_procedure_possibility(spots_or_clouds_in_vision, diagnostic_procedures_on_eye, 39).
+disease_procedure_possibility(spots_or_clouds_in_vision, repair_of_retinal_tear_retachment, 28).
+disease_procedure_possibility(spots_or_clouds_in_vision, other_extraocular_muscle_and_orbit_therapeutic_procedures, 11).
+
+%eyelid lesion or rash
+disease_procedure_possibility(eyelid_lesion_or_rash, complete_physical_skin_exam_performed, 100).
+disease_procedure_possibility(eyelid_lesion_or_rash, excision_removal, 83).
+disease_procedure_possibility(eyelid_lesion_or_rash, ophthalmic_examination_and_evaluation_eye_exam, 79).
+disease_procedure_possibility(eyelid_lesion_or_rash, biopsy, 56).
+disease_procedure_possibility(eyelid_lesion_or_rash, other_therapeutic_procedures_on_eyelids_conjunctiva_cornea, 38).
+disease_procedure_possibility(eyelid_lesion_or_rash, injections_and_aspirations_of_muscles, 11).
+disease_procedure_possibility(eyelid_lesion_or_rash, other_non_OR_therapeutic_procedures_on_skin_and_breast, 11).
+disease_procedure_possibility(eyelid_lesion_or_rash, lens_and_cataract_procedures, 11).
+
