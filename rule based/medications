@@ -148,7 +148,7 @@ disease_medication_possibility(cross_eyed, grepafloxacin_raxar, 12).
 disease_medication_possibility(cross_eyed, malathion_topical, 12).
 disease_medication_possibility(cross_eyed, gemtuzumab_mylotarg, 12).
 disease_medication_possibility(cross_eyed, gadoteridol_prohance, 12).
-disease_medication_possibility(cross_eyed, devil's_claw_preparation, 12).
+disease_medication_possibility(cross_eyed, devils_claw_preparation, 12).
 disease_medication_possibility(cross_eyed, isocarboxazid_marplan, 12).
 disease_medication_possibility(cross_eyed, medysone_ophthalmic, 12).
 disease_medication_possibility(cross_eyed, magnesium_lactate, 12).
