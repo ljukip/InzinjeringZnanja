@@ -1,4 +1,4 @@
-package model;
+package InzinjeringOft.model;
 
 public class Medication {
 

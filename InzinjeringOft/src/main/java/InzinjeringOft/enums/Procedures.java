@@ -1,4 +1,4 @@
-package enums;
+package InzinjeringOft.enums;
 
 public enum Procedures {
 	//add some more
