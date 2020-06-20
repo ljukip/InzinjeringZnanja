@@ -1,9 +1,8 @@
 package InzinjeringOft.model;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
-
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import InzinjeringOft.enums.Diseases;
