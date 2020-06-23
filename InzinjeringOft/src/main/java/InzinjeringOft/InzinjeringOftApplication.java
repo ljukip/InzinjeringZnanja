@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import InzinjeringOft.view.scenes.Main;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import javafx.application.Application;
@@ -26,11 +28,13 @@ public class InzinjeringOftApplication extends Application{
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/InzinjeringOft/sample.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("/InzinjeringOft/main.fxml"));
         primaryStage.setTitle(String.format(TITLE));
         primaryStage.getIcons().add(new Image(APP_LOGO));
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(Main.create());
         //primaryStage.setMaximized(true);
+        primaryStage.setHeight(560);
+        primaryStage.setWidth(860);
         primaryStage.show();
     }
 

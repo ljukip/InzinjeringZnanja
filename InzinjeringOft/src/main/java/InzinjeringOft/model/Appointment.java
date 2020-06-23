@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 
 @Entity
-@Table (name="Exams")
-public class Exam {
+@Table (name="Appointment")
+public class Appointment {
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
@@ -31,7 +31,7 @@ public class Exam {
 
 	    private LocalDateTime date;
 
-	    public Exam(){};
+	    public Appointment(){};
 
 	    public Long getId() {
 	        return id;

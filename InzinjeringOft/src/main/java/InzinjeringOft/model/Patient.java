@@ -29,8 +29,19 @@ public class Patient implements Serializable{
 
     @NotNull
     private String lastName;
+    
+    @NotNull
+    private long jmbg;
 
-    @Enumerated(EnumType.STRING)
+    public long getJmbg() {
+		return jmbg;
+	}
+
+	public void setJmbg(long jmbg) {
+		this.jmbg = jmbg;
+	}
+
+	@Enumerated(EnumType.STRING)
     private Genders gender;
 
     @Enumerated(EnumType.STRING)
@@ -48,9 +59,9 @@ public class Patient implements Serializable{
     private LocalDate dateOfBirth;
 
     @OneToMany(mappedBy = "id")
-    private List<Exam> exams;
+    private List<Appointment> Appointments;
 
-    public Patient(String firstName, String lastName, Genders gender, String address, LocalDate dateOfBirth, String phoneNumber,String email, String city) {
+    public Patient(String firstName, String lastName, Genders gender,long jmbg, String address, LocalDate dateOfBirth, String phoneNumber,String email, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -59,12 +70,13 @@ public class Patient implements Serializable{
         this.phoneNumber = phoneNumber;
         this.email=email;
         this.city = city;
+        this.jmbg=jmbg;
 
-        this.exams = new ArrayList<>();
+        this.Appointments = new ArrayList<>();
     }
 
     public Patient() {
-        this.exams = new ArrayList<>();
+        this.Appointments = new ArrayList<>();
     }
 
     public Long getId() {
@@ -139,12 +151,12 @@ public class Patient implements Serializable{
         this.city = city;
     }
 
-    public List<Exam> getExaminations() {
-        return exams;
+    public List<Appointment> getAppointment() {
+        return Appointments;
     }
 
-    public void setExaminations(List<Exam> examinations) {
-        this.exams = examinations;
+    public void setAppoint(List<Appointment> Appointment) {
+        this.Appointments = Appointment;
     }
 
 
