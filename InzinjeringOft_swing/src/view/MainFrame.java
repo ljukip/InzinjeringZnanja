@@ -27,8 +27,10 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
 import app.Collections;
+import controller.LoadData;
 import controller.MainFrameListener;
 import controller.PatientViewController;
+import model.Disease;
 import model.Patient;
 
 
@@ -47,11 +49,21 @@ public class MainFrame extends JFrame{
 		private JTree tree;
 		private DefaultTreeModel treeModel;
 		private Collections charts;
+		private Disease disease;
 		DefaultMutableTreeNode workspace;
 		JPanel leftPanel,rightPanel,centerPanel;
+		private PatientsSymptomsPanel psp;
+		private PosibleDiseasesPanel pdp;
+
+		public static String reportText;
+		
+		private LoadData data;
 		 
 		
 		public MainFrame()  {
+			
+			setDisease(new Disease());
+			setData(new LoadData());
 			
 			this.addWindowListener(new MainFrameListener());//serijalizacija
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -184,7 +196,8 @@ public class MainFrame extends JFrame{
 			ToolBar tB = new ToolBar();
 			this.add(tB, BorderLayout.NORTH);
 			
-			
+			setPsp(new PatientsSymptomsPanel());
+			setPdp(new PosibleDiseasesPanel());
 			
 			add(main);
 			
@@ -248,6 +261,49 @@ public class MainFrame extends JFrame{
 
 		public JPanel getPanel() {
 			return centerPanel;
+		}
+		public void setPanel(JPanel panel) {
+			this.centerPanel=panel;
+		}
+
+
+		public Disease getDisease() {
+			return disease;
+		}
+
+
+		public void setDisease(Disease disease) {
+			this.disease = disease;
+		}
+
+
+		public PatientsSymptomsPanel getPsp() {
+			return psp;
+		}
+
+
+		public void setPsp(PatientsSymptomsPanel psp) {
+			this.psp = psp;
+		}
+
+
+		public LoadData getData() {
+			return data;
+		}
+
+
+		public void setData(LoadData data) {
+			this.data = data;
+		}
+
+
+		public PosibleDiseasesPanel getPdp() {
+			return pdp;
+		}
+
+
+		public void setPdp(PosibleDiseasesPanel pdp) {
+			this.pdp = pdp;
 		}
 		
 		

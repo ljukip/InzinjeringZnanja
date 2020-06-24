@@ -47,10 +47,10 @@ public class PatientView extends JPanel{
 		w = (int) width;
 		h = (int) height;
 
-		int rPw = (int) (Math.round(w * 0.45));
+		int rPw = (int) (Math.round(w * 0.49));
 
 		left.setPreferredSize(new Dimension(rPw, h));
-		right.setPreferredSize(new Dimension(rPw, h));
+		right.setPreferredSize(new Dimension(w, h));
 		top.setPreferredSize(new Dimension(w, h/9));
 
 		SpringLayout layout = new SpringLayout();
@@ -88,8 +88,8 @@ public class PatientView extends JPanel{
 		gender=new JComboBox(sG);
 		String sR[]= {Race.negroid.name(),Race.australoid.name(),Race.capoid.name(),Race.caucasoid.name(),Race.mongoloid.name()};
 		race=new JComboBox(sR);
-		gender.setSelectedItem(p.getGender());
-		race.setSelectedItem(p.getRace());
+		gender.setSelectedItem(p.getGender().name());
+		race.setSelectedItem(p.getRace().name());
 		
 		if (allow==false) {
 			name.setEditable(false);

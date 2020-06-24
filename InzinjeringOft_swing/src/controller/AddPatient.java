@@ -66,6 +66,8 @@ public class AddPatient implements ActionListener{
 		gender=new JComboBox(sG);
 		String sR[]= {Race.negroid.name(),Race.australoid.name(),Race.capoid.name(),Race.caucasoid.name(),Race.mongoloid.name()};
 		race=new JComboBox(sR);
+		race.setEditable(true);
+		race.setEnabled(true);
 		
 		date=new JCalendar();
 		
@@ -270,11 +272,11 @@ public class AddPatient implements ActionListener{
 				else
 				{
 					Genders g;
-					if (gender.getSelectedItem()==Genders.male)
+					if (gender.getSelectedItem().equals(Genders.male.name()))
 					{
 						g = Genders.male;
 					}
-					else if (gender.getSelectedItem()==Genders.female)
+					else if (gender.getSelectedItem().equals(Genders.female.name()))
 					{
 						g = Genders.female;
 					}
@@ -282,14 +284,15 @@ public class AddPatient implements ActionListener{
 						g=Genders.prefer_not_to_disclose;
 					}
 					Race r;
-					if (race.getSelectedItem()==Race.australoid) {r=Race.australoid;}
-					else if (race.getSelectedItem()==Race.capoid) {r=Race.capoid;}
-					else if (race.getSelectedItem()==Race.caucasoid) {r=Race.caucasoid;}
-					else if (race.getSelectedItem()==Race.mongoloid) {r=Race.mongoloid;}
-					else {r=Race.negroid;}
+					if (race.getSelectedItem().equals(Race.australoid.name())) {r=Race.australoid;}
+					else if (race.getSelectedItem().equals(Race.capoid.name())) {r=Race.capoid;}
+					else if (race.getSelectedItem().equals(Race.caucasoid.name())) {r=Race.caucasoid;}
+					else if (race.getSelectedItem().equals(Race.mongoloid.name())) {r=Race.mongoloid;}
+					else {r=Race.australoid;}
 
 					DefaultMutableTreeNode element = (DefaultMutableTreeNode) MainFrame.getInstance().getTreeModel()
 							.getRoot();
+					System.out.println(g+" "+r.name());
 
 					Patient newP = new Patient(name.getText(), surname.getText(), g,r,jmbg.getText(),adress.getText(), date.getDate(), phone.getText(), email.getText(),city.getText());
 

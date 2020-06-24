@@ -1,8 +1,8 @@
 package enums;
 
 public enum Race {
-	negroid,
 	australoid,
+	negroid,
 	capoid,
 	mongoloid,
 	caucasoid,
