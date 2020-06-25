@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
@@ -28,6 +29,7 @@ import model.Patient;
 
 public class PatientView extends JPanel{
 	private JPanel right, left,top;
+	JScrollPane rightScroll;
 	private static boolean allow=false;
 	private Genders gender;
 
@@ -47,10 +49,10 @@ public class PatientView extends JPanel{
 		w = (int) width;
 		h = (int) height;
 
-		int rPw = (int) (Math.round(w * 0.49));
+		int rPw = (int) (Math.round(w * 0.56));
 
-		left.setPreferredSize(new Dimension(rPw, h));
-		right.setPreferredSize(new Dimension(w, h));
+		left.setPreferredSize(new Dimension(460, h));
+		right.setPreferredSize(new Dimension(300, h));
 		top.setPreferredSize(new Dimension(w, h/9));
 
 		SpringLayout layout = new SpringLayout();
@@ -278,6 +280,12 @@ public class PatientView extends JPanel{
 		layout.putConstraint(SpringLayout.NORTH, full,
                 20,
                 SpringLayout.NORTH, top);
+		layout.putConstraint(SpringLayout.WEST, right,
+                166,
+                SpringLayout.WEST, top);
+		layout.putConstraint(SpringLayout.NORTH, right,
+                20,
+                SpringLayout.NORTH, top);
 		
 		
 		top.add(full);
@@ -304,6 +312,18 @@ public class PatientView extends JPanel{
 		}
 		else {left.add(submit);}
 		
+		if (pp != null) 
+		{
+
+			JLabel label = new JLabel(pp.getChart());
+			label.setFont(new Font("Calibri", Font.PLAIN, 21));
+			label.setVerticalAlignment(JLabel.TOP);
+			label.setVerticalTextPosition(JLabel.TOP);
+			rightScroll=new JScrollPane(label);
+			rightScroll.setPreferredSize(new Dimension(260,460));
+			right.add(rightScroll);
+		}
+		
 		
 		AbstractAction buttonPressedEdit = new AbstractAction() {
 
@@ -321,27 +341,24 @@ public class PatientView extends JPanel{
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				allow=false;
-				Genders g= Genders.male;
-				/*if (gender.getSelectedItem()==Genders.male)
+				Genders g;
+				if (gender.getSelectedItem().equals(Genders.male.name()))
 				{
 					g = Genders.male;
 				}
-				else if (gender.getSelectedItem()==Genders.female)
+				else if (gender.getSelectedItem().equals(Genders.female.name()))
 				{
 					g = Genders.female;
 				}
 				else {
 					g=Genders.prefer_not_to_disclose;
-				}*/
-				System.out.println(g.name());
-				p.setGender(g);
-				System.out.println(p.getGender().name());
+				}
 				
 				Race r;
-				if (race.getSelectedItem()==Race.australoid) {r=Race.australoid;}
-				else if (race.getSelectedItem()==Race.capoid) {r=Race.capoid;}
-				else if (race.getSelectedItem()==Race.caucasoid) {r=Race.caucasoid;}
-				else if (race.getSelectedItem()==Race.mongoloid) {r=Race.mongoloid;}
+				if (race.getSelectedItem().equals(Race.australoid.name())) {r=Race.australoid;}
+				else if (race.getSelectedItem().equals(Race.capoid.name())) {r=Race.capoid;}
+				else if (race.getSelectedItem().equals(Race.caucasoid.name())) {r=Race.caucasoid;}
+				else if (race.getSelectedItem().equals(Race.mongoloid.name())) {r=Race.mongoloid;}
 				else {r=Race.negroid;}
 				p.setPatient(name.getText(), surname.getText(), g,r,jmbg.getText(),adress.getText(), date.getDate(), phone.getText(), email.getText(),city.getText());
 				
@@ -355,17 +372,6 @@ public class PatientView extends JPanel{
 		submit.addMouseListener(new PatientViewController());
 		edit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		submit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
-		if (pp != null)//ne radi da ispisuje preglede
-		{
-
-			JLabel label = new JLabel();
-			label.setFont(new Font("Calibri", Font.BOLD, 30));
-			label.setForeground(Color.white);
-			label.setVerticalAlignment(JLabel.TOP);
-			label.setVerticalTextPosition(JLabel.TOP);
-			right.add(label);
-		}
 		
 		
 		this.add(left,BorderLayout.WEST);

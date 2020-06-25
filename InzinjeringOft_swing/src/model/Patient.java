@@ -46,7 +46,7 @@ public class Patient implements Serializable{
 
     private Date dateOfBirth;
 
-    private List<Appointment> Appointments;
+    private ArrayList<Appointment> Appointments;
 
     public Patient(String firstName, String lastName, Genders gender,Race race,String jmbg, String address, Date dateOfBirth, String phoneNumber,String email, String city) {
         this.firstName = firstName;
@@ -152,11 +152,11 @@ public class Patient implements Serializable{
         this.city = city;
     }
 
-    public List<Appointment> getAppointments() {
+    public ArrayList<Appointment> getAppointments() {
         return Appointments;
     }
 
-    public void setAppoints(List<Appointment> Appointment) {
+    public void setAppoints(ArrayList<Appointment> Appointment) {
         this.Appointments = Appointment;
     }
 

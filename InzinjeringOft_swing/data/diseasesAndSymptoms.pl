@@ -201,7 +201,7 @@ disease_symptom_possibility(cataract, eye_burns_or_stings, 1).
 
 disease_has_symptom(cataract, [diminished_vision, cloudy_eye, symptoms_of_eye, blindness, double_vision, lacrimation, abnormal_movement_of_eyelid, spots_or_clouds_in_vision, pain_in_eye, itchiness_of_eye, foreign_body_sensation_in_eye, eye_burns_or_stings]).
 
-%dry eye
+%conjunctivitis virus
 disease_symptom_possibility(conjunctivitis_virus, eye_redness, 91).
 disease_symptom_possibility(conjunctivitis_virus, itchiness_of_eye, 54).
 disease_symptom_possibility(conjunctivitis_virus, swollen_eye, 49).

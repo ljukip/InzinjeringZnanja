@@ -1,23 +1,79 @@
 package model;
 
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 
-public class Appointment {
-	    private Long id;
+public class Appointment implements Serializable{
+	    public Appointment(ArrayList<String> procedures, String disease, ArrayList<String> medications,
+			ArrayList<String> symptoms) {
+		super();
+		this.procedures = procedures;
+		this.disease = disease;
+		this.medications = medications;
+		this.symptoms = symptoms;
+		this.date=new Date();
+	}
 
-	    private Collection<Procedure> procedure;
+		private Long id;
 
-	    private Disease disease;
+	    private ArrayList<String> procedures;
 
-	    private Collection<Medication> medication;
+	    private String disease;
 
-	    private Collection<Symptom> symptoms;
+	    public ArrayList<String> getProcedures() {
+			return procedures;
+		}
+
+		public void setProcedures(ArrayList<String> procedures) {
+			this.procedures = procedures;
+		}
+
+		public String getDisease() {
+			return disease;
+		}
+
+		public void setDisease(String disease) {
+			this.disease = disease;
+		}
+
+		public ArrayList<String> getMedications() {
+			return medications;
+		}
+
+		public void setMedications(ArrayList<String> medications) {
+			this.medications = medications;
+		}
+
+		public ArrayList<String> getSymptoms() {
+			return symptoms;
+		}
+
+		public void setSymptoms(ArrayList<String> symptoms) {
+			this.symptoms = symptoms;
+		}
+
+		public String getChart() {
+			return chart;
+		}
+
+		public void setChart(String chart) {
+			this.chart = chart;
+		}
+
+		private ArrayList<String> medications;
+
+	    private ArrayList<String> symptoms;
 
 	    private Patient patient;
 
-	    private LocalDateTime date;
+	    private Date date;
+	    
+	    private String chart;
 
 	    public Appointment(){};
 
@@ -29,29 +85,7 @@ public class Appointment {
 	        this.id = id;
 	    }
 
-	    public Collection<Procedure> getProcedure() {
-	        return procedure;
-	    }
-
-	    public void setProcedure(Collection<Procedure> procedure) {
-	        this.procedure = procedure;
-	    }
-
-	    public Disease getDisease() {
-	        return disease;
-	    }
-
-	    public void setDisease(Disease disease) {
-	        this.disease = disease;
-	    }
-
-	    public Collection<Symptom> getSymptoms() {
-	        return symptoms;
-	    }
-
-	    public void setSymptoms(Collection<Symptom> symptoms) {
-	        this.symptoms = symptoms;
-	    }
+	   
 
 	    public Patient getPatient() {
 	        return patient;
@@ -61,19 +95,18 @@ public class Appointment {
 	        this.patient = patient;
 	    }
 
-	    public Collection<Medication> getMedication() {
-	        return medication;
-	    }
 
-	    public void setMedication(Collection<Medication> medication) {
-	        this.medication = medication;
-	    }
-
-	    public LocalDateTime getDate() {
+	    public Date getDate() {
 	        return date;
 	    }
 
-	    public void setDate(LocalDateTime date) {
+	    public void setDate(Date date) {
 	        this.date = date;
 	    }
+	    @Override
+		public String toString()
+		{
+	    	String date=new SimpleDateFormat("dd-MM-yyyy HH:mm").format(this.date);
+			return date;
+		}
 }

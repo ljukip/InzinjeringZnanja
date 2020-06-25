@@ -12,12 +12,12 @@ public class Disease implements Serializable{
 
     private Long id;
     
-    private Diseases name;
+    private String name;
 
     public Disease() {
     }
 
-    public Disease(Long id, Diseases name) {
+    public Disease(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -30,11 +30,11 @@ public class Disease implements Serializable{
         this.id = id;
     }
 
-    public Diseases getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Diseases name) {
+    public void setName(String name) {
         this.name = name;
     }
 }

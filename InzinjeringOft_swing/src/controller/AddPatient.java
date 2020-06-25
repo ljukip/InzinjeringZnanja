@@ -288,7 +288,7 @@ public class AddPatient implements ActionListener{
 					else if (race.getSelectedItem().equals(Race.capoid.name())) {r=Race.capoid;}
 					else if (race.getSelectedItem().equals(Race.caucasoid.name())) {r=Race.caucasoid;}
 					else if (race.getSelectedItem().equals(Race.mongoloid.name())) {r=Race.mongoloid;}
-					else {r=Race.australoid;}
+					else {r=Race.negroid;}
 
 					DefaultMutableTreeNode element = (DefaultMutableTreeNode) MainFrame.getInstance().getTreeModel()
 							.getRoot();

@@ -33,12 +33,12 @@ public class PatientViewController extends MouseAdapter{
 		else if (o instanceof Appointment)
 		{
 			Patient pa = null;
-
+			
 			for (Patient patient : Collections.getInstance().getPatientList())
 			{
 				for (Appointment app : patient.getAppointments())
 				{
-					if (patient.equals(o))
+					if (app.equals(o))
 					{
 						pa = patient;
 					}

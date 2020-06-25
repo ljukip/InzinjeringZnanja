@@ -38,11 +38,16 @@ public class PatientsSymptomsPanel extends JPanel{
 	private DefaultListModel<String> selectedSymptoms;
 	private JScrollPane listScrollerAll;
 	private JScrollPane listScrollerSelected;
+	private JScrollPane scrollReport;
 	private JPanel label;
 	public static String text;
 	private static JLabel txt;
+	private JLabel reportTitle=new JLabel("Patient report:");
 	private JLabel report=new JLabel("Patient report:");
 	public static boolean submit=false;
+	private JButton ok=new JButton("Continue");
+	private SpringLayout layout=new SpringLayout();
+	private JButton cnc=new JButton("Cancel");
 	
 	public PatientsSymptomsPanel(){
 		
@@ -51,8 +56,8 @@ public class PatientsSymptomsPanel extends JPanel{
 		listAllSymptoms=new JList(allSymptoms);
 		listSelectedSymptoms=new JList(selectedSymptoms);
 		listScrollerSelected=new JScrollPane();
+		scrollReport = new JScrollPane();
 		
-		SpringLayout layout=new SpringLayout();
 		this.setLayout(layout);
 		
 		//izgled listi
@@ -81,17 +86,16 @@ public class PatientsSymptomsPanel extends JPanel{
 		label=new JPanel();
 		label.setLayout(layout);
 		text="Patient hasnt reported any symptoms";
-		txt=new JLabel(text);
-		txt.setFont(new Font("Calibri", Font.PLAIN, 16));
 		System.out.println(text);
-		report.setFont(new Font("Calibri", Font.BOLD, 21));
+		report=new JLabel(this.getText());
+		report.setFont(new Font("Calibri", Font.PLAIN, 16));
+		reportTitle.setFont(new Font("Calibri", Font.BOLD, 16));
 
 		listScrollerAll.setPreferredSize(new Dimension( 380,340));
 		listScrollerSelected.setPreferredSize(new Dimension(380,340));
+		scrollReport.setPreferredSize(new Dimension(440,116));
 		
 
-		JButton ok=new JButton("Continue");
-		JButton cnc=new JButton("Cancel");
 		ok.setEnabled(false);
 		
 		JButton reportB=new JButton ("report symptoms");
@@ -100,12 +104,11 @@ public class PatientsSymptomsPanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				text="Patient " + patient.getFirstName() +" "+ patient.getLastName()+
-						" is experiencing the following symptoms:" 
-						+ selectedSymptoms.toString();
-				MainFrame.getInstance().reportText=text;
-				
-				txt.setText(text);
+				text="<html>Patient " + patient.getFirstName() +" "+ patient.getLastName()+
+						" has reported:<br/>" 
+						+ selectedSymptoms.toString()+"<html>";
+				JLabel temp=new JLabel(text);
+				MainFrame.getInstance().getPsp().setReport(temp);
 				submit=true;
 				ok.setEnabled(true);
 				MainFrame.getInstance().getPsp().revalidate();
@@ -140,17 +143,17 @@ public class PatientsSymptomsPanel extends JPanel{
 		layout.putConstraint(SpringLayout.NORTH, listScrollerSelected,
                 40,
                 SpringLayout.NORTH, this);
-		layout.putConstraint(SpringLayout.WEST, txt,
+		layout.putConstraint(SpringLayout.WEST, reportTitle,
                 20,
                 SpringLayout.WEST, this);
-		layout.putConstraint(SpringLayout.NORTH, txt,
-                440,
-                SpringLayout.NORTH, this);
-		layout.putConstraint(SpringLayout.WEST, report,
-                20,
-                SpringLayout.WEST, this);
-		layout.putConstraint(SpringLayout.NORTH, report,
+		layout.putConstraint(SpringLayout.NORTH, reportTitle,
                 400,
+                SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, scrollReport,
+                20,
+                SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.NORTH, scrollReport,
+                421,
                 SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.WEST, reportB,
                 690,
@@ -178,8 +181,8 @@ public class PatientsSymptomsPanel extends JPanel{
 		this.add(listScrollerSelected);
 		this.add(labelAll);
 		this.add(labelSelect);
-		this.add(txt);
-		this.add(report);
+		this.add(reportTitle);
+		this.add(scrollReport);
 		this.add(reportB);
 		this.add(ok);
 		this.add(cnc);
@@ -187,6 +190,26 @@ public class PatientsSymptomsPanel extends JPanel{
 		
 		
 		
+	}
+	public JLabel getReport() {
+		return report;
+	}
+	public void setReport(JLabel report) {
+		this.remove(report);
+		this.report = report;
+		this.remove(scrollReport);
+		scrollReport=new JScrollPane(report);
+		
+		scrollReport.setPreferredSize(new Dimension( 440,96));
+		this.layout.putConstraint(SpringLayout.WEST, scrollReport,
+                20,
+                SpringLayout.WEST, this);
+		this.layout.putConstraint(SpringLayout.NORTH, scrollReport,
+                440,
+                SpringLayout.NORTH, this);
+		this.add(scrollReport);
+		this.revalidate();
+		this.repaint();
 	}
 	public void inputSymptoms(ArrayList<String> list)
 	{
@@ -200,8 +223,9 @@ public class PatientsSymptomsPanel extends JPanel{
 		//ako je vec izabran,preskoci,u suprotnom dodaj
 		if (selectedSymptoms.contains(s))
 			return false;
+		else {
 		selectedSymptoms.addElement(s);
-		
+		}
 		this.revalidate();
 		this.repaint();
 		
@@ -283,4 +307,17 @@ public class PatientsSymptomsPanel extends JPanel{
 		this.txt.revalidate();
 		this.txt.repaint();
 	}
+	public JButton getOk() {
+		return ok;
+	}
+	public void setOk(JButton ok) {
+		this.ok = ok;
+	}
+	public JButton getCnc() {
+		return cnc;
+	}
+	public void setCnc(JButton cnc) {
+		this.cnc = cnc;
+	}
+
 }

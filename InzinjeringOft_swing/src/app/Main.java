@@ -96,7 +96,7 @@ public class Main {
 				@SuppressWarnings("unchecked")
 				ArrayList<Patient> patients = (ArrayList<Patient>) in.readObject();
 
-				Collections.getInstance().setPatientList(patients);;
+				Collections.getInstance().setPatientList(patients);
 			}
 			catch (ClassNotFoundException e)
 			{

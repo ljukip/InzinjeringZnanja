@@ -13,34 +13,34 @@ disease_medication_possibility(chronic_glaucoma, phenylephrine_duramax, 36).
 
 
 
-%blindness
-disease_medication_possibility(blindness, brimonidine_ophthalmic, 100).
-disease_medication_possibility(blindness, atropine, 66).
-disease_medication_possibility(blindness, prednisolone_ophthalmic, 66).
-disease_medication_possibility(blindness, bimatoprost_ophthalmic, 56).
-disease_medication_possibility(blindness, travoprost_travatan, 45).
-disease_medication_possibility(blindness, tropicamide_ophthalmic, 45).
-disease_medication_possibility(blindness, phenylephrine_duramax, 45).
-disease_medication_possibility(blindness, brizolamide_ophthalmic, 30).
-disease_medication_possibility(blindness, timolol, 30).
-disease_medication_possibility(blindness, fluorescein_ophthalmic, 10).
-disease_medication_possibility(blindness, gatifloxacin_zymar, 10).
-disease_medication_possibility(blindness, proparacain_ophthalmic, 10).
+%acuta_dacryocystitis
+disease_medication_possibility(acuta_dacryocystitis, brimonidine_ophthalmic, 100).
+disease_medication_possibility(acuta_dacryocystitis, atropine, 66).
+disease_medication_possibility(acuta_dacryocystitis, prednisolone_ophthalmic, 66).
+disease_medication_possibility(acuta_dacryocystitis, bimatoprost_ophthalmic, 56).
+disease_medication_possibility(acuta_dacryocystitis, travoprost_travatan, 45).
+disease_medication_possibility(acuta_dacryocystitis, tropicamide_ophthalmic, 45).
+disease_medication_possibility(acuta_dacryocystitis, phenylephrine_duramax, 45).
+disease_medication_possibility(acuta_dacryocystitis, brizolamide_ophthalmic, 30).
+disease_medication_possibility(acuta_dacryocystitis, timolol, 30).
+disease_medication_possibility(acuta_dacryocystitis, fluorescein_ophthalmic, 10).
+disease_medication_possibility(acuta_dacryocystitis, gatifloxacin_zymar, 10).
+disease_medication_possibility(acuta_dacryocystitis, proparacain_ophthalmic, 10).
 
-%eye redness
-disease_medication_possibility(eye_redness, gentamicin_ophthalmic, 10).
-disease_medication_possibility(eye_redness, erythromycin, 10).
-disease_medication_possibility(eye_redness, moxifloxacin_avelox, 10).
-disease_medication_possibility(eye_redness, sodium_sulfacetamide_ophthalmic, 10).
-disease_medication_possibility(eye_redness, tobramycin_tobi, 10).
-disease_medication_possibility(eye_redness, erythromycin_ophthalmic, 10).
-disease_medication_possibility(eye_redness, ciprofloxacin_ophthalmic, 10).
-disease_medication_possibility(eye_redness, tropicamide_ophthalmic, 10).
-disease_medication_possibility(eye_redness, olopatadine_ophthalmic, 10).
-disease_medication_possibility(eye_redness, dexamethasone_tobramycin_ophthalmic, 10).
-disease_medication_possibility(eye_redness, tetracaine_one_touch, 10).
-disease_medication_possibility(eye_redness, ofloxacin_ophthalmic, 10).
-disease_medication_possibility(eye_redness, proparacaine_ophthalmic, 10).
+%chronic dacryocystitis
+disease_medication_possibility(chronic_dacryocystitis, gentamicin_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, erythromycin, 10).
+disease_medication_possibility(chronic_dacryocystitis, moxifloxacin_avelox, 10).
+disease_medication_possibility(chronic_dacryocystitis, sodium_sulfacetamide_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, tobramycin_tobi, 10).
+disease_medication_possibility(chronic_dacryocystitis, erythromycin_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, ciprofloxacin_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, tropicamide_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, olopatadine_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, dexamethasone_tobramycin_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, tetracaine_one_touch, 10).
+disease_medication_possibility(chronic_dacryocystitis, ofloxacin_ophthalmic, 10).
+disease_medication_possibility(chronic_dacryocystitis, proparacaine_ophthalmic, 10).
 
 %diminished vision
 disease_medication_possibility(diminished_vision, tropicamide_ophthalmic, 100).
@@ -57,8 +57,8 @@ disease_medication_possibility(diminished_vision, dexamethasone_tobramycin_ophth
 disease_medication_possibility(diminished_vision, timolol, 12).
 disease_medication_possibility(diminished_vision, bimatoprost_ophthalmic, 10).
 
-%double vision
-disease_medication_possibility(double_vision, pyridostigmine, 100).
+%vitreous hemorrhage
+disease_medication_possibility(vitreous_hemorrhage, pyridostigmine, 100).
 disease_medication_possibility(double_vision, tropicamide_ophthalmic, 100).
 disease_medication_possibility(double_vision, phenylephrine_duramax, 100).
 disease_medication_possibility(double_vision, dexamethasone_tobramycin_ophthalmic, 55).
@@ -69,65 +69,65 @@ disease_medication_possibility(double_vision, cyclopentolate_ophthalmic, 10).
 disease_medication_possibility(double_vision, glatiramer_copolymer, 10).
 disease_medication_possibility(double_vision, azathioprine, 10).
 
-%eyelid swelling
-disease_medication_possibility(eyelid_swelling, erythromycin, 100).
-disease_medication_possibility(eyelid_swelling, erythromycin_ophthalmic, 82).
-disease_medication_possibility(eyelid_swelling, dexamethasone_tobramycin_ophthalmic, 75).
-disease_medication_possibility(eyelid_swelling, sodium_sulfacetamide_ophthalmic, 68).
-disease_medication_possibility(eyelid_swelling, olopatadine_ophthalmic, 68).
-disease_medication_possibility(eyelid_swelling, gentamicin_ophthalmic, 50).
-disease_medication_possibility(eyelid_swelling, bacitracin_ophthalmic, 35).
-disease_medication_possibility(eyelid_swelling, fluorescein_ophthalmic, 35).
-disease_medication_possibility(eyelid_swelling, tobramycin_ophthalmic, 35).
-disease_medication_possibility(eyelid_swelling, tobramycin_tobi, 35).
-disease_medication_possibility(eyelid_swelling, proparacaine_ophthalmic, 35).
-disease_medication_possibility(eyelid_swelling, tetracaine_one_touch, 35).
+%vitreous degeneration
+disease_medication_possibility(vitreous_degeneration, erythromycin, 100).
+disease_medication_possibility(vitreous_degeneration, erythromycin_ophthalmic, 82).
+disease_medication_possibility(vitreous_degeneration, dexamethasone_tobramycin_ophthalmic, 75).
+disease_medication_possibility(vitreous_degeneration, sodium_sulfacetamide_ophthalmic, 68).
+disease_medication_possibility(vitreous_degeneration, olopatadine_ophthalmic, 68).
+disease_medication_possibility(vitreous_degeneration, gentamicin_ophthalmic, 50).
+disease_medication_possibility(vitreous_degeneration, bacitracin_ophthalmic, 35).
+disease_medication_possibility(vitreous_degeneration, fluorescein_ophthalmic, 35).
+disease_medication_possibility(vitreous_degeneration, tobramycin_ophthalmic, 35).
+disease_medication_possibility(vitreous_degeneration, tobramycin_tobi, 35).
+disease_medication_possibility(vitreous_degeneration, proparacaine_ophthalmic, 35).
+disease_medication_possibility(vitreous_degeneration, tetracaine_one_touch, 35).
 
-%swollen eye
-disease_medication_possibility(swollen_eye, erythromycin, 10).
-disease_medication_possibility(swollen_eye, gentamicin_ophthalmic, 81).
-disease_medication_possibility(swollen_eye, erythromycin_ophthalmic, 79).
-disease_medication_possibility(swollen_eye, sodium_sulfacetamide_ophthalmic, 74).
-disease_medication_possibility(swollen_eye, tetracaine_one_touch, 71).
-disease_medication_possibility(swollen_eye, olopatadine_ophthalmic, 68).
-disease_medication_possibility(swollen_eye, tobramycin_ophthalmic, 65).
-disease_medication_possibility(swollen_eye, fluorescein_ophthalmic, 58).
-disease_medication_possibility(swollen_eye, tobramycin_tobi, 58).
-disease_medication_possibility(swollen_eye, ciprofloxacin_ophthalmic, 54).
-disease_medication_possibility(swollen_eye, dexamethasone_tobramycin_ophthalmic, 40).
-disease_medication_possibility(swollen_eye, proparacaine_ophthalmic, 40).
-disease_medication_possibility(swollen_eye, ofloxacin_ophthalmic, 10).
+%myopia
+disease_medication_possibility(myopia, erythromycin, 10).
+disease_medication_possibility(myopia, gentamicin_ophthalmic, 81).
+disease_medication_possibility(myopia, erythromycin_ophthalmic, 79).
+disease_medication_possibility(myopia, sodium_sulfacetamide_ophthalmic, 74).
+disease_medication_possibility(myopia, tetracaine_one_touch, 71).
+disease_medication_possibility(myopia, olopatadine_ophthalmic, 68).
+disease_medication_possibility(myopia, tobramycin_ophthalmic, 65).
+disease_medication_possibility(myopia, fluorescein_ophthalmic, 58).
+disease_medication_possibility(myopia, tobramycin_tobi, 58).
+disease_medication_possibility(myopia, ciprofloxacin_ophthalmic, 54).
+disease_medication_possibility(myopia, dexamethasone_tobramycin_ophthalmic, 40).
+disease_medication_possibility(myopia, proparacaine_ophthalmic, 40).
+disease_medication_possibility(myopia, ofloxacin_ophthalmic, 10).
 
-%abnormal eyelid movement
-disease_medication_possibility(abnormal_eyelid_movement, botulinum_toxin_type_A, 100).
-disease_medication_possibility(abnormal_eyelid_movement, brimonidine_ophthalmic, 63).
-disease_medication_possibility(abnormal_eyelid_movement, tropicamide_ophthalmic, 63).
-disease_medication_possibility(abnormal_eyelid_movement, pyridostidine_mestinon, 43).
-disease_medication_possibility(abnormal_eyelid_movement, dexamethasone_tobramycin_ophthalmic, 43).
-disease_medication_possibility(abnormal_eyelid_movement, tobramycin_tobi, 43).
-disease_medication_possibility(abnormal_eyelid_movement, timolol, 43).
-disease_medication_possibility(abnormal_eyelid_movement, acetylcholinee_ophthalmic, 11).
-disease_medication_possibility(abnormal_eyelid_movement, pergolide, 11).
-disease_medication_possibility(abnormal_eyelid_movement, hyauronidase, 11).
-disease_medication_possibility(abnormal_eyelid_movement, magnesium_salicylate, 11).
-disease_medication_possibility(abnormal_eyelid_movement, sodium_sulfacetamide_ophthalmic, 11).
+%conjunctivitis
+disease_medication_possibility(conjunctivitis, botulinum_toxin_type_A, 100).
+disease_medication_possibility(conjunctivitis, brimonidine_ophthalmic, 63).
+disease_medication_possibility(conjunctivitis, tropicamide_ophthalmic, 63).
+disease_medication_possibility(conjunctivitis, pyridostidine_mestinon, 43).
+disease_medication_possibility(conjunctivitis, dexamethasone_tobramycin_ophthalmic, 43).
+disease_medication_possibility(conjunctivitis, tobramycin_tobi, 43).
+disease_medication_possibility(conjunctivitis, timolol, 43).
+disease_medication_possibility(conjunctivitis, acetylcholinee_ophthalmic, 11).
+disease_medication_possibility(conjunctivitis, pergolide, 11).
+disease_medication_possibility(conjunctivitis, hyauronidase, 11).
+disease_medication_possibility(conjunctivitis, magnesium_salicylate, 11).
+disease_medication_possibility(conjunctivitis, sodium_sulfacetamide_ophthalmic, 11).
 
 %abnormal eye movement
-disease_medication_possibility(abnormal_eye_movement, nystatin_topical_product, 100).
-disease_medication_possibility(abnormal_eye_movement, oxygen, 100).
-disease_medication_possibility(abnormal_eye_movement, corticotropin_acthar, 71).
-disease_medication_possibility(abnormal_eye_movement, pancreatin, 71).
-disease_medication_possibility(abnormal_eye_movement, timolol, 71).
-disease_medication_possibility(abnormal_eye_movement, travoprost, 71).
-disease_medication_possibility(abnormal_eye_movement, tropicamide_ophthalmic, 71).
-disease_medication_possibility(abnormal_eye_movement, mycophenolate_mofetil, 71).
-disease_medication_possibility(abnormal_eye_movement, sennosides_usp, 71).
-disease_medication_possibility(abnormal_eye_movement, phenylephrine_duramax, 71).
-disease_medication_possibility(abnormal_eye_movement, latanoprost, 71).
-disease_medication_possibility(abnormal_eye_movement, malathion_topical, 11).
-disease_medication_possibility(abnormal_eye_movement, gafoteridol_prohance, 11).
+disease_medication_possibility(conjunctivitis_allergy, nystatin_topical_product, 100).
+disease_medication_possibility(conjunctivitis_allergy, oxygen, 100).
+disease_medication_possibility(conjunctivitis_allergy, corticotropin_acthar, 71).
+disease_medication_possibility(conjunctivitis_allergy, pancreatin, 71).
+disease_medication_possibility(conjunctivitis_allergy, timolol, 71).
+disease_medication_possibility(conjunctivitis_allergy, travoprost, 71).
+disease_medication_possibility(conjunctivitis_allergy, tropicamide_ophthalmic, 71).
+disease_medication_possibility(conjunctivitis_allergy, mycophenolate_mofetil, 71).
+disease_medication_possibility(conjunctivitis_allergy, sennosides_usp, 71).
+disease_medication_possibility(conjunctivitis_allergy, phenylephrine_duramax, 71).
+disease_medication_possibility(conjunctivitis_allergy, latanoprost, 71).
+disease_medication_possibility(conjunctivitis_allergy, malathion_topical, 11).
+disease_medication_possibility(conjunctivitis_allergy, gafoteridol_prohance, 11).
 
-%eye deviation
+%conjunctivitis allergy
 disease_medication_possibility(eye_deviation, cyclopentolate_ophthalmic, 100).
 disease_medication_possibility(eye_deviation, proparacaine_ophthalmic, 100).
 disease_medication_possibility(eye_deviation, tropicamide_ophthalmic, 100).
@@ -154,92 +154,61 @@ disease_medication_possibility(cross_eyed, medysone_ophthalmic, 12).
 disease_medication_possibility(cross_eyed, magnesium_lactate, 12).
 disease_medication_possibility(cross_eyed, ethynodiol, 12).
 
-%eye pain
-disease_medication_possibility(eye_pain, erythromycin, 100).
-disease_medication_possibility(eye_pain, gentamicin_ophthalmic, 75).
-disease_medication_possibility(eye_pain, tetracaine_one_touch, 74).
-disease_medication_possibility(eye_pain, proparacaine_ophthalmic, 65).
-disease_medication_possibility(eye_pain, moxifloxacin_avelox, 60).
-disease_medication_possibility(eye_pain, erythromycin_ophthalmic, 50).
-disease_medication_possibility(eye_pain, tobramycin_tobi, 48).
-disease_medication_possibility(eye_pain, prednisolone_ophthalmic, 48).
-disease_medication_possibility(eye_pain, sodium_sulfacetamide_ophthalmic, 45).
-disease_medication_possibility(eye_pain, fluorescein_ophthalmic, 31).
-disease_medication_possibility(eye_pain, dexamethsone_tobramycin_ophthalmic, 19).
-disease_medication_possibility(eye_pain, tobramycin_ophthalmic, 15).
-disease_medication_possibility(eye_pain, ciproflocxacin_ophthalmic, 12).
+%conjunctivitis bacteria
+disease_medication_possibility(conjunctivitis_bacteria, erythromycin, 100).
+disease_medication_possibility(conjunctivitis_bacteria, gentamicin_ophthalmic, 75).
+disease_medication_possibility(conjunctivitis_bacteria, tetracaine_one_touch, 74).
+disease_medication_possibility(conjunctivitis_bacteria, proparacaine_ophthalmic, 65).
+disease_medication_possibility(conjunctivitis_bacteria, moxifloxacin_avelox, 60).
+disease_medication_possibility(conjunctivitis_bacteria, erythromycin_ophthalmic, 50).
+disease_medication_possibility(conjunctivitis_bacteria, tobramycin_tobi, 48).
+disease_medication_possibility(conjunctivitis_bacteria, prednisolone_ophthalmic, 48).
+disease_medication_possibility(conjunctivitis_bacteria, sodium_sulfacetamide_ophthalmic, 45).
+disease_medication_possibility(conjunctivitis_bacteria, fluorescein_ophthalmic, 31).
+disease_medication_possibility(conjunctivitis_bacteria, dexamethsone_tobramycin_ophthalmic, 19).
+disease_medication_possibility(conjunctivitis_bacteria, tobramycin_ophthalmic, 15).
+disease_medication_possibility(conjunctivitis_bacteria, ciproflocxacin_ophthalmic, 12).
 
-%eye burns or stings
-disease_medication_possibility(eye_burns_or_stings, erythromycin, 100).
-disease_medication_possibility(eye_burns_or_stings, gentamicin_ophthalmic, 55).
-disease_medication_possibility(eye_burns_or_stings, tetracaine_one_touch, 50).
-disease_medication_possibility(eye_burns_or_stings, olopatadine_ophthalmic, 50).
-disease_medication_possibility(eye_burns_or_stings, fluorescein_ophthalmic, 44).
-disease_medication_possibility(eye_burns_or_stings, erythromycin_ophthalmic, 144).
-disease_medication_possibility(eye_burns_or_stings, tobramycin_tobi, 44).
-disease_medication_possibility(eye_burns_or_stings, tropicamide_ophthalmic, 37).
-disease_medication_possibility(eye_burns_or_stings, phenylephrine_duramax, 30).
-disease_medication_possibility(eye_burns_or_stings, cyclosporine_ophthalmic, 18).
-disease_medication_possibility(eye_burns_or_stings, naphazoline_ophthalmic, 11).
-disease_medication_possibility(eye_burns_or_stings, loteprednol_ophthalmic, 11).
-disease_medication_possibility(eye_burns_or_stings, ciproflocxacin_ophthalmic, 11).
+%astigmatism
+disease_medication_possibility(astigmatism, erythromycin, 100).
+disease_medication_possibility(astigmatism, gentamicin_ophthalmic, 55).
+disease_medication_possibility(astigmatism, tetracaine_one_touch, 50).
+disease_medication_possibility(astigmatism, olopatadine_ophthalmic, 50).
+disease_medication_possibility(astigmatism, fluorescein_ophthalmic, 44).
+disease_medication_possibility(astigmatism, erythromycin_ophthalmic, 144).
+disease_medication_possibility(astigmatism, tobramycin_tobi, 44).
+disease_medication_possibility(astigmatism, tropicamide_ophthalmic, 37).
+disease_medication_possibility(astigmatism, phenylephrine_duramax, 30).
+disease_medication_possibility(astigmatism, cyclosporine_ophthalmic, 18).
+disease_medication_possibility(astigmatism, naphazoline_ophthalmic, 11).
+disease_medication_possibility(astigmatism, loteprednol_ophthalmic, 11).
+disease_medication_possibility(astigmatism, ciproflocxacin_ophthalmic, 11).
 
-%foreign body sensation
-disease_medication_possibility(foreign_body_sensation, erythromycin, 100).
-disease_medication_possibility(foreign_body_sensation, moxifloxacin_avelox, 100).
-disease_medication_possibility(foreign_body_sensation, prednisolone_ophthalmic, 75).
-disease_medication_possibility(foreign_body_sensation, tropicamide_ophthalmic, 65).
-disease_medication_possibility(foreign_body_sensation, fluorescein_ophthalmic, 54).
-disease_medication_possibility(foreign_body_sensation, gentamicin_ophthalmic, 42).
-disease_medication_possibility(foreign_body_sensation, latanoprost, 42).
-disease_medication_possibility(foreign_body_sensation, ocular_lubricanr, 26).
-disease_medication_possibility(foreign_body_sensation, gatifloxacin_zymar, 26).
-disease_medication_possibility(foreign_body_sensation, tetracaine_one_touch, 26).
-disease_medication_possibility(foreign_body_sensation, phenylephrine_duramax, 26).
-disease_medication_possibility(foreign_body_sensation, loteprednol_ophthalmic, 9).
+%cataract
+disease_medication_possibility(cataract, erythromycin, 100).
+disease_medication_possibility(cataract, moxifloxacin_avelox, 100).
+disease_medication_possibility(cataract, prednisolone_ophthalmic, 75).
+disease_medication_possibility(cataract, tropicamide_ophthalmic, 65).
+disease_medication_possibility(cataract, fluorescein_ophthalmic, 54).
+disease_medication_possibility(cataract, gentamicin_ophthalmic, 42).
+disease_medication_possibility(cataract, latanoprost, 42).
+disease_medication_possibility(cataract, ocular_lubricanr, 26).
+disease_medication_possibility(cataract, gatifloxacin_zymar, 26).
+disease_medication_possibility(cataract, tetracaine_one_touch, 26).
+disease_medication_possibility(cataract, phenylephrine_duramax, 26).
+disease_medication_possibility(cataract, loteprednol_ophthalmic, 9).
 
-%lacrimation
-disease_medication_possibility(lacrimation, olopatadine_ophthalmic, 100).
-disease_medication_possibility(lacrimation, moxifloxacin_avelox, 66).
-disease_medication_possibility(lacrimation, tobramycin_ophthalmic, 43).
-disease_medication_possibility(lacrimation, erythromycin_ophthalmic, 28).
-disease_medication_possibility(lacrimation, azelastine_ophthalmic, 22).
-disease_medication_possibility(lacrimation, proparacaine_ophthalmic, 22).
-disease_medication_possibility(lacrimation, gentamicin_ophthalmic, 22).
-disease_medication_possibility(lacrimation, brimonidin_ophthalmic, 15).
-disease_medication_possibility(lacrimation, phenylephrine_duramax, 15).
-disease_medication_possibility(lacrimation, prednisolone_ophthalmic, 15).
-disease_medication_possibility(lacrimation, loteprednol_ophthalmic, 11).
-disease_medication_possibility(lacrimation, cyclosporine_ophthalmic, 11).
-
-%spots or clouds in _vision
-disease_medication_possibility(spots_or_clouds_in_vision, tropicamide_ophthalmic, 100).
-disease_medication_possibility(spots_or_clouds_in_vision, prednisolone_ophthalmic, 68).
-disease_medication_possibility(spots_or_clouds_in_vision, phenylephrine_duramax, 56).
-disease_medication_possibility(spots_or_clouds_in_vision, latanoprost, 51).
-disease_medication_possibility(spots_or_clouds_in_vision, benoxinate_fluorescein_ophthalmic, 35).
-disease_medication_possibility(spots_or_clouds_in_vision, bomatoprost_ophthalmic, 31).
-disease_medication_possibility(spots_or_clouds_in_vision, brimonidin_ophthalmic, 27).
-disease_medication_possibility(spots_or_clouds_in_vision, cyclosporine_ophthalmic, 19).
-disease_medication_possibility(spots_or_clouds_in_vision, timolol, 15).
-disease_medication_possibility(spots_or_clouds_in_vision, travoprost, 15).
-disease_medication_possibility(spots_or_clouds_in_vision, cyclopentolate_ophthalmic, 11).
-disease_medication_possibility(spots_or_clouds_in_vision, ciprofloxacin_ophthalmic, 11).
-disease_medication_possibility(spots_or_clouds_in_vision, dexamethsone_tobramycin_ophthalmic, 11).
-
-
-%eyelid lesion or rash
-disease_medication_possibility(eyelid_lesion_or_rash, dexamethsone_tobramycin_ophthalmic, 100).
-disease_medication_possibility(eyelid_lesion_or_rash, erythromycin, 80).
-disease_medication_possibility(eyelid_lesion_or_rash, tobramycin_ophthalmic, 46).
-disease_medication_possibility(eyelid_lesion_or_rash, olopatadine_ophthalmic, 46).
-disease_medication_possibility(eyelid_lesion_or_rash, bacitracin_ophthalmic, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, tacrolimus_tropical_prodict, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, candesartan_atacand, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, tropicamide_ophthalmic, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, tobramycin_tobi, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, timolol, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, ketoconazole, 32).
-disease_medication_possibility(eyelid_lesion_or_rash, tolmetin, 11).
-disease_medication_possibility(eyelid_lesion_or_rash, azithromycin_ophthalmic, 11).
+%conjunctivitis virus
+disease_medication_possibility(conjunctivitis_virus, olopatadine_ophthalmic, 100).
+disease_medication_possibility(conjunctivitis_virus, moxifloxacin_avelox, 66).
+disease_medication_possibility(conjunctivitis_virus, tobramycin_ophthalmic, 43).
+disease_medication_possibility(conjunctivitis_virus, erythromycin_ophthalmic, 28).
+disease_medication_possibility(conjunctivitis_virus, azelastine_ophthalmic, 22).
+disease_medication_possibility(conjunctivitis_virus, proparacaine_ophthalmic, 22).
+disease_medication_possibility(conjunctivitis_virus, gentamicin_ophthalmic, 22).
+disease_medication_possibility(conjunctivitis_virus, brimonidin_ophthalmic, 15).
+disease_medication_possibility(conjunctivitis_virus, phenylephrine_duramax, 15).
+disease_medication_possibility(conjunctivitis_virus, prednisolone_ophthalmic, 15).
+disease_medication_possibility(conjunctivitis_virus, loteprednol_ophthalmic, 11).
+disease_medication_possibility(conjunctivitis_virus, cyclosporine_ophthalmic, 11).
 

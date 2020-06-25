@@ -54,6 +54,8 @@ public class MainFrame extends JFrame{
 		JPanel leftPanel,rightPanel,centerPanel;
 		private PatientsSymptomsPanel psp;
 		private PosibleDiseasesPanel pdp;
+		private ProcedureMedicationPanel pmp;
+		private SubmitChartPanel scp;
 
 		public static String reportText;
 		
@@ -198,6 +200,8 @@ public class MainFrame extends JFrame{
 			
 			setPsp(new PatientsSymptomsPanel());
 			setPdp(new PosibleDiseasesPanel());
+			setPmp(new ProcedureMedicationPanel());
+			//setScp(new SubmitChartPanel());
 			
 			add(main);
 			
@@ -304,6 +308,26 @@ public class MainFrame extends JFrame{
 
 		public void setPdp(PosibleDiseasesPanel pdp) {
 			this.pdp = pdp;
+		}
+
+
+		public ProcedureMedicationPanel getPmp() {
+			return pmp;
+		}
+
+
+		public void setPmp(ProcedureMedicationPanel pmp) {
+			this.pmp = pmp;
+		}
+
+
+		public SubmitChartPanel getScp() {
+			return scp;
+		}
+
+
+		public void setScp(SubmitChartPanel scp) {
+			this.scp = scp;
 		}
 		
 		

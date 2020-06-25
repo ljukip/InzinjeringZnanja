@@ -111,7 +111,7 @@ public class LoadData {
 		MainFrame.getInstance().getPdp().getHashDiseases().clear();
 		int j = 0;
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i <listPosibleDiseases.size() ; i++) //graf za sve moguce bolesti
 		{
 			for (Map.Entry<String, Double> iter : mapDiseases.entrySet())
 			{
@@ -125,5 +125,120 @@ public class LoadData {
 		}
 	}
 	
+	public ArrayList<String> getDiseaseSimptomes(String selectedDisease)
+	{
+		// TODO Auto-generated method stub
+
+		ArrayList<String> list = new ArrayList<>();
+		JIPEngine engine = new JIPEngine();
+		engine.consultFile("data/diseasesAndSymptoms.pl");
+		JIPQuery query = engine.openSynchronousQuery("disease_symptom_possibility(" + selectedDisease + ", X, P).");
+
+		JIPTerm solution;
+
+		while ((solution = query.nextSolution()) != null)
+		{
+			JIPVariable[] vars = solution.getVariables();
+			list.add(vars[0].toString());
+
+		}
+
+		return list;
+
+	}
+	
+	public void fillProcedures() {
+		
+		HashMap<String, Integer> procedureMap = new HashMap<>();
+
+		JIPEngine engine = new JIPEngine();
+		engine.consultFile("data/extraProcedures.pl");
+		JIPQuery query = engine.openSynchronousQuery("disease_procedure_possibility("
+				+ MainFrame.getInstance().getPdp().getDiseases().getSelectedValue() + ", X, P).");
+
+		JIPTerm solution;
+		while ((solution = query.nextSolution()) != null)
+		{
+			JIPVariable[] vars = solution.getVariables();
+
+			procedureMap.put(vars[0].toString(), Integer.parseInt(vars[1].toString()));
+
+		}
+
+		ArrayList<Integer> listPoslibleProcedures = new ArrayList<>();
+		for (Map.Entry<String, Integer> iterator : procedureMap.entrySet())
+		{
+			listPoslibleProcedures.add(iterator.getValue());
+		}
+
+		java.util.Collections.sort(listPoslibleProcedures, java.util.Collections.reverseOrder());
+
+		MainFrame.getInstance().getPmp().getHashProcedures().clear();
+
+		int j = 0;
+
+		for (int i = 0; i < listPoslibleProcedures.size(); i++)
+		{
+			for (Map.Entry<String, Integer> iterator : procedureMap.entrySet())
+			{
+				if (iterator.getValue() == listPoslibleProcedures.get(j))
+				{
+					MainFrame.getInstance().getPmp().getHashProcedures().put(iterator.getKey(), iterator.getValue());
+					j++;
+					break;
+				}
+			}
+
+		}
+	}
+	
+	public void fillMeds()
+	{
+		HashMap<String, Integer> medsMap = new HashMap<>();
+
+		JIPEngine engine = new JIPEngine();
+		engine.consultFile("data/medications.pl");
+		JIPQuery query = engine.openSynchronousQuery("disease_medication_possibility("
+				+ MainFrame.getInstance().getPdp().getDiseases().getSelectedValue() + ", M, P).");
+		
+		JIPTerm solution;
+		while ((solution = query.nextSolution()) != null)
+		{
+			JIPVariable[] vars = solution.getVariables();
+
+			medsMap.put(vars[0].toString(), Integer.parseInt(vars[1].toString()));
+
+
+			//System.out.println("ucitani lekovi su: " + vars[0].toString()+ Integer.parseInt(vars[1].toString()));
+
+		}
+
+		ArrayList<Integer> listaPosibleMeds = new ArrayList<>();
+		for (Map.Entry<String, Integer> iterator : medsMap.entrySet())
+		{
+			listaPosibleMeds.add(iterator.getValue());
+		}
+
+		java.util.Collections.sort(listaPosibleMeds, java.util.Collections.reverseOrder());
+
+		MainFrame.getInstance().getPmp().getHashMeds().clear();
+
+		int j = 0;
+
+		for (int i = 0; i < listaPosibleMeds.size(); i++)
+		{
+			for (Map.Entry<String, Integer> iterator : medsMap.entrySet())
+			{
+				if (iterator.getValue() == listaPosibleMeds.get(j))
+				{
+					MainFrame.getInstance().getPmp().getHashMeds().put(iterator.getKey(), iterator.getValue());
+					j++;
+					break;
+				}
+			}
+
+		}
+
+	}
 
 }

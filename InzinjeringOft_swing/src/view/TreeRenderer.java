@@ -17,7 +17,7 @@ public class TreeRenderer extends DefaultTreeCellRenderer{
 	private static final long serialVersionUID = 6126281402028638784L;
 	private ImageIcon charts =new ImageIcon( getClass().getResource("/images/trans1.png") );
 	private ImageIcon chart = new ImageIcon(getClass().getResource("/images/patient.png"));
-	private ImageIcon appointment = new ImageIcon("images/doctor.png");
+	private ImageIcon appointment = new ImageIcon(getClass().getResource("/images/appointment.png"));
 	
 	public Component getTreeCellRendererComponent(JTree tree, Object value, boolean sel, boolean expanded, boolean leaf,
 			int row, boolean hasFocus) {
@@ -53,7 +53,11 @@ public class TreeRenderer extends DefaultTreeCellRenderer{
 			{
 				Appointment oo = (Appointment) o;
 				setText(oo.toString());
-				setIcon(appointment);
+				
+				ImageIcon imageIcon = appointment; 
+				Image image = imageIcon.getImage(); // transform it 
+				Image newimg = image.getScaledInstance(26, 26,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+				setIcon(new ImageIcon(newimg));
 			}
 		}
 		return this;
