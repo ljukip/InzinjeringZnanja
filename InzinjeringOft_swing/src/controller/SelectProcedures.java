@@ -3,9 +3,12 @@ package controller;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import model.Appointment;
+import model.Medication;
 import view.MainFrame;
 
 public class SelectProcedures implements MouseListener {
+	private Appointment app;
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -17,6 +20,11 @@ public class SelectProcedures implements MouseListener {
 
 				MainFrame.getInstance().getPmp().getSelProcedures().addElement(MainFrame.getInstance().getPmp().getListProcedures().getSelectedValue());
 		
+			app = new Appointment(MainFrame.getInstance().getDisease().getName(),
+					MainFrame.getInstance().getPmp().getListProcedures().getSelectedValue(),
+					MainFrame.getInstance().getPmp().getHashProcedures().get(MainFrame.getInstance().getPmp().getListProcedures().getSelectedValue()));
+			MainFrame.getInstance().getApp().add(app);
+			
 		}
 
 	}

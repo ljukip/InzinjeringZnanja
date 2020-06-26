@@ -80,7 +80,7 @@ public class CbrApplicationMedication implements StandardCBRApplication{
 		MainFrame.getInstance().getPmp().getHashMeds().clear();
 
 		Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
-		eval = SelectCases.selectTopKRR(eval, 3);
+		eval = SelectCases.selectTopKRR(eval, 6);
 		System.out.println("Retrieved meds:");
 		for (RetrievalResult nse : eval)
 		{

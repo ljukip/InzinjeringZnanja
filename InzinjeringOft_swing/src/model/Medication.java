@@ -50,6 +50,45 @@ public class Medication implements Serializable, CaseComponent{
 	ear_pain,
 	abnormal_appearing_skin,
 	cloudy_eye;
+    
+    public String stringForCase() {
+    	return "\n"+disease +","+ blindness+","
+    			+eye_redness+","
+    			+itchiness_of_eye+","
+    			+diminished_vision+","
+    			+double_vision+","
+    			+eyelid_swelling+","
+    			+swollen_eye+","
+    			+abnormal_eyelid_movement+","
+    			+abnormal_eye_movement+","
+    			+eye_deviation+","
+    			+cross_eyed+","
+    			+eye_pain+","
+    			+eye_burns_or_stings+","
+    			+foreign_body_sensation+","
+    			+lacrimation+","
+				+spots_or_clouds_in_vision+","
+				+eyelid_lesion+","
+				+eyelid_rash+","
+				+eye_symptoms+","
+				+white_discharge_from_eye+","
+				+yellow_discharge_from_eye+","
+				+mass_on_eyelid+","
+				+bleeding_from_eye+","
+				+cough+","
+				+nasal_congestion+","
+				+fever+","
+				+sore_throat+","
+				+coryza+","
+				+allergic_reaction+","
+				+sneezing+","
+				+ear_pain+","
+				+abnormal_appearing_skin+","
+				+cloudy_eye+","
+				+name+","
+				+posibility+","
+    			+ "\n";
+    }
        
        public String getDisease() {
 		return disease;
@@ -328,6 +367,44 @@ public class Medication implements Serializable, CaseComponent{
 	}
 
 	public Medication() {
+       	this.blindness=0;
+       	this.eye_redness=0;
+       	this.itchiness_of_eye=0;
+       	this.diminished_vision=0;
+       	this.double_vision=0;
+       	this.eyelid_swelling=0;
+       	this.swollen_eye=0;
+       	this.abnormal_eyelid_movement=0;
+       	this.abnormal_eye_movement=0;
+       	this.eye_deviation=0;
+       	this.cross_eyed=0;
+       	this.eye_pain=0;
+       	this.eye_burns_or_stings=0;
+       	this.foreign_body_sensation=0;
+       	this.lacrimation=0;
+       	this.spots_or_clouds_in_vision=0;
+       	this.eyelid_lesion=0;
+       	this.eyelid_rash=0;
+       	this.eye_symptoms=0;
+       	this.white_discharge_from_eye=0;
+    	this.yellow_discharge_from_eye=0;
+    	this.mass_on_eyelid=0;
+    	this.bleeding_from_eye=0;
+    	this.cough=0;
+    	this.nasal_congestion=0;
+    	this.fever=0;
+    	this.sore_throat=0;
+    	this.coryza=0;
+    	this.allergic_reaction=0;
+    	this.sneezing=0;
+    	this.ear_pain=0;
+    	this.abnormal_appearing_skin=0;
+    	this.cloudy_eye=0;
+       }
+	public Medication(String disease,String name,int p) {
+		this.name=name;
+		this.disease=disease;
+		this.posibility=p;
        	this.blindness=0;
        	this.eye_redness=0;
        	this.itchiness_of_eye=0;

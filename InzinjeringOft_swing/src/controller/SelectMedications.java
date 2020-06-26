@@ -5,10 +5,13 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JOptionPane;
 
+import model.Medication;
 import view.MainFrame;
 
 
 public class SelectMedications implements MouseListener {
+
+	private Medication med;
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
@@ -19,6 +22,12 @@ public class SelectMedications implements MouseListener {
 
 				MainFrame.getInstance().getPmp().getSelMeds()
 						.addElement(MainFrame.getInstance().getPmp().getListMeds().getSelectedValue());
+			
+			med = new Medication(MainFrame.getInstance().getDisease().getName(),
+					MainFrame.getInstance().getPmp().getListMeds().getSelectedValue(),
+					MainFrame.getInstance().getPmp().getHashMeds().get(MainFrame.getInstance().getPmp().getListMeds().getSelectedValue()));
+			MainFrame.getInstance().getMeds().add(med);
+			
 
 		}
 

@@ -155,6 +155,8 @@ public class NextAL implements ActionListener{
 		{
 
 			mf.getPanel().removeAll();
+			mf.getPmp().getMeds().clear();
+			mf.getPmp().getProcedures().clear();
 			
 			HashMap<String, String> map = new HashMap<>();
 			
@@ -203,26 +205,7 @@ public class NextAL implements ActionListener{
 			
 			DefaultMutableTreeNode element = (DefaultMutableTreeNode) mf.getTreeModel().getRoot();
 
-			for (int i = 0; i < element.getChildCount(); i++)
-			{
-				DefaultMutableTreeNode patient = (DefaultMutableTreeNode) element.getChildAt(i);
-				Patient p = (Patient) patient.getUserObject();
-
-				if (p.toString().equals(mf.getPsp().getPatient().toString()))
-				{
-					mf.getTreeModel().insertNodeInto(new DefaultMutableTreeNode(appointment), patient,
-							patient.getChildCount());
-
-					for (Patient iterPat : Collections.getInstance().getPatientList())
-					{
-						if (iterPat.getFirstName().equals(p.getFirstName()) && iterPat.getLastName().equals(p.getLastName()))
-						{
-							iterPat.getAppointments().add(appointment);
-						}
-					}
-
-				}
-			}
+			
 			
 			mf.getPanel().removeAll();
 
@@ -232,12 +215,50 @@ public class NextAL implements ActionListener{
 					JOptionPane.YES_NO_OPTION);
 			if (reply == JOptionPane.YES_OPTION)
 			{
+				
+				for (int i = 0; i < element.getChildCount(); i++)
+				{
+					DefaultMutableTreeNode patient = (DefaultMutableTreeNode) element.getChildAt(i);
+					Patient p = (Patient) patient.getUserObject();
+
+					if (p.toString().equals(mf.getPsp().getPatient().toString()))
+					{
+						mf.getTreeModel().insertNodeInto(new DefaultMutableTreeNode(appointment), patient,
+								patient.getChildCount());
+
+						for (Patient iterPat : Collections.getInstance().getPatientList())
+						{
+							if (iterPat.getFirstName().equals(p.getFirstName()) && iterPat.getLastName().equals(p.getLastName()))
+							{
+								iterPat.getAppointments().add(appointment);
+							}
+						}
+
+					}
+				}
+				
 				try
 				{
 					String filename = "data/cases_symptoms.csv";
 					FileWriter fw = new FileWriter(filename, true); // the true will append the new data
 					fw.write(mf.getDisease().stringForCase());// appends the string to the file
 					fw.close();
+					
+					String filenamem = "data/cases_meds.csv";
+					FileWriter fwm = new FileWriter(filenamem, true); // the true will append the new data
+					for (int i=0; i<mf.getMeds().size();i++) {
+					fwm.write(mf.getMeds().get(i).stringForCase());// appends the string to the file
+					//System.out.println(mf.getMeds().get(i).stringForCase());
+					}
+					fwm.close();
+					
+					String filenamep = "data/cases_procedures.csv";
+					FileWriter fwp = new FileWriter(filenamep, true); // the true will append the new data
+					for (int i=0; i<mf.getApp().size();i++) {
+					fwp.write(mf.getApp().get(i).stringForCase());// appends the string to the file
+					//System.out.println(mf.getMeds().get(i).stringForCase());
+					}
+					fwp.close();
 				}
 				catch (IOException ioe)
 				{

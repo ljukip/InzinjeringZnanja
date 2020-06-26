@@ -70,7 +70,8 @@ public class Appointment implements Serializable, CaseComponent{
 		sneezing,
 		ear_pain,
 		abnormal_appearing_skin,
-		cloudy_eye;
+		cloudy_eye,posibility;
+	    String name;
 	    
 	    public int getWhite_discharge_from_eye() {
 			return white_discharge_from_eye;
@@ -184,7 +185,10 @@ public class Appointment implements Serializable, CaseComponent{
 			this.cloudy_eye = cloudy_eye;
 		}
 
-		public Appointment() {
+		public Appointment(String disease, String name, int p) {
+			this.name=name;
+			this.disease=disease;
+			this.posibility=p;
 	    	this.blindness=0;
 	    	this.eye_redness=0;
 	    	this.itchiness_of_eye=0;
@@ -296,7 +300,8 @@ public class Appointment implements Serializable, CaseComponent{
 	    	this.ear_pain=Integer.parseInt(values[31]);
 	    	this.abnormal_appearing_skin=Integer.parseInt(values[32]);
 	    	this.cloudy_eye=Integer.parseInt(values[33]);
-	    	this.procedure=values[34];
+	    	this.name=values[34];
+	    	this.posibility=Integer.parseInt(values[35]);
 	    	
 			
 		}
@@ -523,11 +528,6 @@ public class Appointment implements Serializable, CaseComponent{
 	    public void setDate(Date date) {
 	        this.date = date;
 	    }
-	    @Override
-		public String toString()
-		{
-	    	return procedure;
-		}
 
 	    public String stringDate() {
 	    	String date=new SimpleDateFormat("dd-MM-yyyy HH:mm").format(this.date);
@@ -538,4 +538,49 @@ public class Appointment implements Serializable, CaseComponent{
 			// TODO Auto-generated method stub
 			return null;
 		}
+		
+		public String stringForCase() {
+	    	return "\n"+disease +","+ blindness+","
+	    			+eye_redness+","
+	    			+itchiness_of_eye+","
+	    			+diminished_vision+","
+	    			+double_vision+","
+	    			+eyelid_swelling+","
+	    			+swollen_eye+","
+	    			+abnormal_eyelid_movement+","
+	    			+abnormal_eye_movement+","
+	    			+eye_deviation+","
+	    			+cross_eyed+","
+	    			+eye_pain+","
+	    			+eye_burns_or_stings+","
+	    			+foreign_body_sensation+","
+	    			+lacrimation+","
+					+spots_or_clouds_in_vision+","
+					+eyelid_lesion+","
+					+eyelid_rash+","
+					+eye_symptoms+","
+					+white_discharge_from_eye+","
+					+yellow_discharge_from_eye+","
+					+mass_on_eyelid+","
+					+bleeding_from_eye+","
+					+cough+","
+					+nasal_congestion+","
+					+fever+","
+					+sore_throat+","
+					+coryza+","
+					+allergic_reaction+","
+					+sneezing+","
+					+ear_pain+","
+					+abnormal_appearing_skin+","
+					+cloudy_eye+","
+					+name+","
+					+posibility+","
+	    			+ "\n";
+	    }
+		@Override
+		public String toString()
+		{
+			return name;
+		}
+		
 }

@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -31,7 +32,9 @@ import app.Collections;
 import controller.LoadData;
 import controller.MainFrameListener;
 import controller.PatientViewController;
+import model.Appointment;
 import model.Disease;
+import model.Medication;
 import model.Patient;
 
 
@@ -51,6 +54,8 @@ public class MainFrame extends JFrame{
 		private DefaultTreeModel treeModel;
 		private Collections charts;
 		private Disease disease;
+		private ArrayList <Medication> meds;
+		private ArrayList <Appointment> app;
 		DefaultMutableTreeNode workspace;
 		JPanel leftPanel,rightPanel,centerPanel;
 		private PatientsSymptomsPanel psp;
@@ -68,6 +73,8 @@ public class MainFrame extends JFrame{
 		public MainFrame()  {
 			
 			setMapCbrDiseases(new HashMap<>());
+			meds=new ArrayList <Medication>();
+			app=new ArrayList <Appointment>();
 			
 			setDisease(new Disease());
 			setData(new LoadData());
@@ -343,6 +350,26 @@ public class MainFrame extends JFrame{
 
 		public void setMapCbrDiseases(HashMap<String, Double> MapCbrDiseases) {
 			this.MapCbrDiseases = MapCbrDiseases;
+		}
+
+
+		public ArrayList<Medication> getMeds() {
+			return meds;
+		}
+
+
+		public void setMeds(ArrayList<Medication> meds) {
+			this.meds = meds;
+		}
+
+
+		public ArrayList <Appointment> getApp() {
+			return app;
+		}
+
+
+		public void setApp(ArrayList <Appointment> app) {
+			this.app = app;
 		}
 		
 		
