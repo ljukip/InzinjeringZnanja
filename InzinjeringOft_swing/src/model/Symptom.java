@@ -5,7 +5,6 @@ import enums.Symptoms;
 public class Symptom {
 
     private Long id;
-
     private Symptoms name;
 
     public Symptom() {

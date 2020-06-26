@@ -93,7 +93,7 @@ disease_has_symptom(vitreous_degeneration, [lacrimation, itchiness_of_eye, eye_b
 % myopia (short sighted)
 disease_symptom_possibility(myopia, diminished_vision, 81).
 disease_symptom_possibility(myopia, spots_of_clouds_in_vision, 46).
-disease_symptom_possibility(myopia, eye_moves_abnormally, 41).
+disease_symptom_possibility(myopia, abnormal_eyelid_movement, 41).
 disease_symptom_possibility(myopia, pain_in_eye, 27).
 disease_symptom_possibility(myopia, symptoms_of_eye, 23).
 disease_symptom_possibility(myopia, eye_redness, 15).
@@ -102,9 +102,8 @@ disease_symptom_possibility(myopia, itchiness_of_eye, 9).
 disease_symptom_possibility(myopia, lacrimation, 9).
 disease_symptom_possibility(myopia, blindness, 5).
 disease_symptom_possibility(myopia, eye_deviation, 3).
-disease_symptom_possibility(myopia, abnormal_movement_of_eyelid, 3).
 
-disease_has_symptom(myopia, [diminished_vision, spots_of_clouds_in_vision, eye_moves_abnormally, pain_in_eye, eye_redness, foreign_body_sensation_in_eye, itchiness_of_eye, lacrimation, blindness, eye_deviation, abnormal_movement_of_eyelid ]).
+disease_has_symptom(myopia, [diminished_vision, spots_of_clouds_in_vision, abnormal_eyelid_movement, pain_in_eye, eye_redness, foreign_body_sensation_in_eye, itchiness_of_eye, lacrimation, blindness, eye_deviation ]).
 
 % conjunctivitis
 disease_symptom_possibility(conjunctivitis, white_discharge_from_eye, 86).

@@ -22,5 +22,21 @@ public enum Symptoms {
 	eyelid_lesion,
 	eyelid_rash,
 	eye_symptoms,
+	
+	white_discharge_from_eye,
+	yellow_discharge_from_eye,
+	mass_on_eyelid,
+	bleeding_from_eye,
+	cough,
+	nasal_congestion,
+	fever,
+	sore_throat,
+	coryza,
+	allergic_reaction,
+	sneezing,
+	ear_pain,
+	abnormal_appearing_skin,
+	cloudy_eye,
+	
 
 }

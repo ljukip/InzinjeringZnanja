@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Collection;
+import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -58,11 +59,15 @@ public class MainFrame extends JFrame{
 		private SubmitChartPanel scp;
 
 		public static String reportText;
+		public static Boolean isCase=false;
 		
 		private LoadData data;
-		 
-		
+		private HashMap<String, Double> MapCbrDiseases;
+
+
 		public MainFrame()  {
+			
+			setMapCbrDiseases(new HashMap<>());
 			
 			setDisease(new Disease());
 			setData(new LoadData());
@@ -329,6 +334,17 @@ public class MainFrame extends JFrame{
 		public void setScp(SubmitChartPanel scp) {
 			this.scp = scp;
 		}
+
+
+		public HashMap<String, Double> getMapCbrDiseases() {
+			return MapCbrDiseases;
+		}
+
+
+		public void setMapCbrDiseases(HashMap<String, Double> MapCbrDiseases) {
+			this.MapCbrDiseases = MapCbrDiseases;
+		}
+		
 		
 		
 	}

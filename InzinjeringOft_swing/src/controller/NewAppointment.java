@@ -35,10 +35,10 @@ public class NewAppointment implements ActionListener{
 
 		if (element == null)
 		{
-			/*JOptionPane.showMessageDialog(MainFrame.getInstance(), "Patient not selected!", "Error1!",
+			JOptionPane.showMessageDialog(MainFrame.getInstance(), "Patient not selected!", "Error1!",
 					JOptionPane.WARNING_MESSAGE);
-			return;*/
-			JFrame listFrame=new JFrame("Patient selection");
+			return;
+			/*JFrame listFrame=new JFrame("Patient selection");
 			listFrame.setSize(466, 444);
 			listFrame.setLocationRelativeTo(MainFrame.getInstance());
 			listFrame.setLayout(new BorderLayout());
@@ -69,9 +69,15 @@ public class NewAppointment implements ActionListener{
 						if (Collections.getInstance().getPatientList().get(i).getFirstName().equals(patName)) 
 						{
 							patient=Collections.getInstance().getPatientList().get(i);
-							MainFrame.getInstance().getPsp().setPatient(patient);
+							
 						}
 					}
+					MainFrame.getInstance().getPsp().setPatient(patient);
+					MainFrame.getInstance().getPanel().removeAll();
+					PatientsSymptomsPanel view = MainFrame.getInstance().getPsp();
+					MainFrame.getInstance().getPanel().add(view);
+					MainFrame.getInstance().getPanel().revalidate();
+					MainFrame.getInstance().getPanel().repaint();
 					
 					listFrame.dispose();
 				}
@@ -84,7 +90,7 @@ public class NewAppointment implements ActionListener{
 			listFrame.add(dugmici,BorderLayout.SOUTH);
 			listFrame.setVisible(true);
 			
-			
+			*/
 		}
 		Object o = element.getUserObject();
 

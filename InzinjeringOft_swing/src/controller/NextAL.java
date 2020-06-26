@@ -15,6 +15,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 
+import app.CbrApplication;
+import app.CbrApplicationMedication;
+import app.CbrApplicationProcedure;
 import app.Collections;
 import model.Appointment;
 import model.Patient;
@@ -47,6 +50,13 @@ public class NextAL implements ActionListener{
 			{
 				selectedSymptoms.add(dLm.getElementAt(i));
 			}
+			for (int i = 0; i < mf.getPsp().getSelectedSymptoms().getSize(); i++)
+			{
+				String s = mf.getPsp().getSelectedSymptoms().get(i);
+
+				mf.getDisease().setSymptomCase(s);
+
+			}
 			
 			String text="Patient is experiencing the following symptoms:" 
 					+ selectedSymptoms;
@@ -55,14 +65,32 @@ public class NextAL implements ActionListener{
 
 				mf.getPanel().removeAll();
 
-				mf.getData().getDiseases();
 
+				//uzimamo podatke za ruleBased
+				if(MainFrame.isCase==false) {
+				mf.getData().getDiseases();
+				
 				mf.getPdp().fillHasDiseases();
 
 				
 				@SuppressWarnings("unused")
 				Graph g = new Graph(mf.getPdp().getHashDiseases());
 				mf.getPdp().graphInsert();
+				}
+				//Uzimamo podatke za case based
+				else if(MainFrame.isCase==true) {
+					System.out.println("case poceo");
+					
+				@SuppressWarnings("unused")
+				CbrApplication cA = new CbrApplication();
+				CbrApplication.main(null);
+				
+				@SuppressWarnings("unused")
+				Graph g = new Graph(mf.getMapCbrDiseases());
+				mf.getPdp().graphInsert();
+
+				}
+				
 
 				//System.out.println(mf.getPdp().getHashDiseases());
 				
@@ -85,18 +113,36 @@ public class NextAL implements ActionListener{
 
 				mf.getPanel().removeAll();
 
-				mf.getData().fillMeds();
-				mf.getData().fillProcedures();
-
-				mf.getPmp().fillMeds();
-				mf.getPmp().fillProcedures();
-
+		
+				if(MainFrame.isCase==false) {
+					mf.getData().fillMeds();
+					mf.getData().fillProcedures();
+					
+					mf.getPmp().fillMeds();
+					mf.getPmp().fillProcedures();
+					
 				@SuppressWarnings("unused")
 				Graph gm = new Graph(mf.getPmp().getHashMeds(),1);
 				mf.getPmp().graphInsert();
 				@SuppressWarnings("unused")
 				Graph gp = new Graph(mf.getPmp().getHashProcedures(),2);
 				mf.getPmp().graphInsert();
+				}
+				else if(MainFrame.isCase==true) {
+					CbrApplicationMedication cam=new CbrApplicationMedication();
+					CbrApplicationMedication.main(null);
+					CbrApplicationProcedure.main(null);
+				
+					mf.getPmp().fillMeds();
+					mf.getPmp().fillProcedures();
+					
+					@SuppressWarnings("unused")
+					Graph gm = new Graph(mf.getPmp().getHashMeds(),1);
+					mf.getPmp().graphInsert();
+					@SuppressWarnings("unused")
+					Graph gp = new Graph(mf.getPmp().getHashProcedures(),2);
+					mf.getPmp().graphInsert();
+				}
 
 				MainFrame.getInstance().getPanel().removeAll();
 				ProcedureMedicationPanel view = MainFrame.getInstance().getPmp();
@@ -128,6 +174,8 @@ public class NextAL implements ActionListener{
 		}
 		
 		else if (components[0] instanceof SubmitChartPanel) {
+			
+			if(MainFrame.isCase==true) {MainFrame.isCase=false;}
 			
 			ArrayList<String> symptoms, meds, procedures;
 
@@ -188,7 +236,7 @@ public class NextAL implements ActionListener{
 				{
 					String filename = "data/cases_symptoms.csv";
 					FileWriter fw = new FileWriter(filename, true); // the true will append the new data
-					fw.write(mf.getDisease().toString());// appends the string to the file
+					fw.write(mf.getDisease().stringForCase());// appends the string to the file
 					fw.close();
 				}
 				catch (IOException ioe)

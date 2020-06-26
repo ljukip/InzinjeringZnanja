@@ -18,6 +18,7 @@ import javax.swing.KeyStroke;
 
 import controller.AddPatient;
 import controller.NewAppointment;
+import controller.NewCaseAppointment;
 
 public class ToolBar extends JToolBar {
 	
@@ -83,6 +84,9 @@ public class ToolBar extends JToolBar {
 		
 		NewAppointment np=new NewAppointment();
 		n.addActionListener(np);
+		
+		NewCaseAppointment ncp=new NewCaseAppointment();
+		r.addActionListener(ncp);
 		
 		setFloatable(true);
 		setBackground(new Color(238, 213, 242));

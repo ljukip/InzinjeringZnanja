@@ -6,9 +6,9 @@ public class Chart {
     private Long id;
     private Patient patient;
     private List<Disease> diseases;
-    private List<Procedure> procedures;
+    private List<Appointment> procedures;
 
-    public Chart(Long id, Patient patient, List<Disease> diseases, List<Procedure> procedures) {
+    public Chart(Long id, Patient patient, List<Disease> diseases, List<Appointment> procedures) {
         this.id = id;
         this.patient = patient;
         this.diseases = diseases;
@@ -39,11 +39,11 @@ public class Chart {
         this.diseases = diseases;
     }
 
-    public List<Procedure> getProcedures() {
+    public List<Appointment> getProcedures() {
         return procedures;
     }
 
-    public void setProcedures(List<Procedure> procedures) {
+    public void setProcedures(List<Appointment> procedures) {
         this.procedures = procedures;
     }
 }

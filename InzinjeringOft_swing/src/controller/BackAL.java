@@ -24,6 +24,8 @@ public class BackAL implements ActionListener{
 
 		if (components[0] instanceof PatientsSymptomsPanel)
 		{
+			if(MainFrame.isCase==true) {MainFrame.isCase=false;}
+			
 			mf.getPanel().removeAll();
 			
 			mf.getPanel().revalidate();

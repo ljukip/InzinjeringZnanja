@@ -30,7 +30,7 @@ public class LoadData {
 		
 		JIPEngine engine = new JIPEngine();
 		engine.consultFile("data/diseasesAndSymptoms.pl");
-		JIPQuery query = engine.openSynchronousQuery("symptom_disease_possibility(S,D,P)");
+		JIPQuery query = engine.openSynchronousQuery("disease_symptom_possibility(D,S,P)");
 
 		JIPTerm solution;
 
@@ -40,7 +40,7 @@ public class LoadData {
 
 			String symptom;
 
-			symptom = vars[0].toString();
+			symptom = vars[1].toString();
 
 			this.symptoms.add(symptom);
 

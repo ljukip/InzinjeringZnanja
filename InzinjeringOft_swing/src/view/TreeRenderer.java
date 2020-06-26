@@ -52,7 +52,7 @@ public class TreeRenderer extends DefaultTreeCellRenderer{
 			else if (o instanceof Appointment)
 			{
 				Appointment oo = (Appointment) o;
-				setText(oo.toString());
+				setText(oo.stringDate());
 				
 				ImageIcon imageIcon = appointment; 
 				Image image = imageIcon.getImage(); // transform it 
